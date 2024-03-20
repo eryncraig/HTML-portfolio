@@ -48,6 +48,13 @@ a {
   text-decoration: none;
 }
 
+.about-main {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: justify;
+}
+
 a:visited {
   color: var(--secondary-color);
 }
@@ -63,7 +70,9 @@ a:active {
 
 button, .button, .button:visited {
   border: none;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  width: 180px;
   font-family: inherit;
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -220,9 +229,16 @@ display: inline-block;
   }
 }
 
-.portland-illustration {
+/* Center SVG animation */
+.svg-container {
+  display: flex;
   margin: 0 auto;
+  flex: 0 0 400px;
 }
+
+/* .portland-illustration {
+  margin-right: 10px;
+} */
 
 @keyframes color-change {
   0% {
