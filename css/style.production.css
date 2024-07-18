@@ -56,6 +56,13 @@ a {
   text-decoration: none;
 }
 
+.about-main {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: justify;
+}
+
 a:visited {
   color: var(--secondary-color);
 }
@@ -69,9 +76,14 @@ a:active {
   color:var(--accent-color);
 }
 
+/* creating button from link tags and styling */
 button, .button, .button:visited {
   border: none;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  width: 180px;
   font-family: inherit;
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -106,6 +118,54 @@ max-width: 700px;
 margin: 0 auto;
 }
 
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+form, .form-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 15px;
+}
+
+form input, form textarea {
+  padding: 5px;
+  margin: 10px;
+}
+
+.form-button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px auto;
+}
+
+th, td {
+  padding: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+
 .page__footer {
   clear: both;
   display: -webkit-box;
@@ -116,7 +176,10 @@ margin: 0 auto;
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  margin-top: 400px;
 }
+
+/* aligning all menu/header objects + scale and styling */
 
 .page-header {
   display: -webkit-box;
@@ -155,7 +218,7 @@ margin: 0 auto;
 
 
 .navigation-list li {
-display: inline-block;
+  display: inline-block;
   margin-left: 15px;
 
 }
@@ -170,6 +233,7 @@ display: inline-block;
   text-decoration: none;
 }
 
+/* navigation bar animations for hover state */
 .navigation-list__item::before {
   content: '';
   position: absolute;
@@ -198,6 +262,7 @@ display: inline-block;
   width: 33%;
 }
 
+/* for browsers that don't use flexbox, plus practice for grid layouts */
 @supports (display: grid) {
 .grid {
   display: -ms-grid;
@@ -222,6 +287,8 @@ display: inline-block;
  -ms-grid-row-span: 2;
  grid-row: 1 / 3; 
 }
+
+/* Responsive behavior implementation */
 
 @media all and (max-width: 500px) {
   .grid {
@@ -250,8 +317,17 @@ display: inline-block;
   }
 }
 
-.portland-illustration {
+/* Center SVG animation, animations below that */
+.svg-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 auto;
+  max-width: 1024px;
+}
+
+.portland-illustration {
+  margin-right: 10px;
 }
 
 @-webkit-keyframes color-change {
@@ -315,8 +391,8 @@ display: inline-block;
             transform: translate(0px, 0px);
   }
   to {
-    -webkit-transform: translate(100px, 0px);
-            transform: translate(100px, 0px);
+    -webkit-transform: translate(80px, 0px);
+            transform: translate(80px, 0px);
   }
 }
 
@@ -326,8 +402,8 @@ display: inline-block;
             transform: translate(0px, 0px);
   }
   to {
-    -webkit-transform: translate(100px, 0px);
-            transform: translate(100px, 0px);
+    -webkit-transform: translate(80px, 0px);
+            transform: translate(80px, 0px);
   }
 }
 
