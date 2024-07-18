@@ -118,10 +118,21 @@ max-width: 700px;
 margin: 0 auto;
 }
 
-form {
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+form, .form-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,7 +140,24 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 700px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 15px;
+}
+
+form input, form textarea {
+  padding: 5px;
+  margin: 10px;
+}
+
+.form-button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px auto;
 }
 
 th, td {
@@ -148,6 +176,7 @@ th, td {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  margin-top: 400px;
 }
 
 /* aligning all menu/header objects + scale and styling */

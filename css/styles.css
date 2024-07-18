@@ -106,11 +106,30 @@ max-width: 700px;
 margin: 0 auto;
 }
 
-form {
+.form-container {
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+form, .form-button {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
+  justify-content: center;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 15px;
+}
+
+form input, form textarea {
+  padding: 5px;
+  margin: 10px;
+}
+
+.form-button {
+  align-items: center;
+  margin: 5px auto;
 }
 
 th, td {
@@ -124,6 +143,7 @@ th, td {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 400px;
 }
 
 /* aligning all menu/header objects + scale and styling */
